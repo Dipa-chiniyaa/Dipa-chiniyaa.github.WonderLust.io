@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderLust</title>
+</head>
+<body>
+    <h1>All Listings</h1>
+    <form method="get" action="/listings/new">
+        <button>Create New Listing</button>
+    </form>
+    <ul>
+<!-- to print all listing one by one we need a loop -->
+
+<%for(let itm of allListings) { %>
+    <li><a href="/listings/<%=itm._id%>"><%= itm.title %></a></li>
+<%}%>
+    </ul>
+    
+</body>
+</html>
+
